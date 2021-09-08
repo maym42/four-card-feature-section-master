@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+:root {
+    /*### Primary*/
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    /*### Neutral*/
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    /*### spaces*/
+    --M-Space: 20px;
+    --L-Space: 30px;
+}
+
+body {
+    background-color: var(--Very-Light-Gray);
+    /*text*/
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    margin: 5vw;
+}
+
+.intro {
+    /*size*/
+    box-sizing: border-box;
+    /*space*/
+    padding: 3px;
+    /*text*/
+    text-align: center;
+    /*space*/
+    padding-top: 8vh;
+    margin-bottom: 8vh;
+}
+
+.thin-title {
+    /*space*/
+    margin-top: 0;
+    margin-bottom: 0;
+    /*text*/
+    color: var(--Very-Dark-Blue);
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.thick-title {
+    /*space*/
+    margin-top: 0;
+    margin-bottom: 0;
+    /*text*/
+    color: var(--Very-Dark-Blue);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.intro-text {
+    /*space*/
+    margin-top: var(--M-Space);
+    /*text*/
+    color: var(--Grayish-Blue);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    /*var*/
+    --Very-Dark-Blue-Transparent: hsl(234, 12%, 34%, 0.2);
+    /*box-shadow*/
+    /* box-shadow: x-axis | y-axis | blur-radius | spread | color*/
+    box-shadow: 0 10px 10px 0 var(--Very-Dark-Blue-Transparent);
+    /*space*/
+    padding: var(--M-Space);
+    margin-bottom: 3vh;
+}
+
+.card-title {
+    /*space*/
+    margin-top: 0;
+    margin-bottom: 0.5vh;
+    /*text*/
+    color: var(--Very-Dark-Blue);
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.card-text {
+    /*space*/
+    margin-top: 0;
+    margin-bottom: var(--L-Space);
+    /*text*/
+    color: var(--Grayish-Blue);
+}
+
+.icon {
+    /*image*/
+    background-repeat: no-repeat;
+    /*size*/
+    width: 64px;
+    height: 64px;
+    /*space*/
+    margin-left: auto;
+}
+
+#card-supervisor {
+    /*border-top: line-width | line-style | color*/
+    border-top: 5px solid var(--Cyan);
+}
+
+#card-team-builder {
+    /*border-top: line-width | line-style | color*/
+    border-top: 5px solid var(--Red);
+}
+
+#card-karma {
+    /*border-top: line-width | line-style | color*/
+    border-top: 5px solid var(--Orange);
+}
+
+#card-calculator {
+    /*border-top: line-width | line-style | color*/
+    border-top: 5px solid var(--Blue);
+}
+
+#icon-supervisor {
+    /*image*/
+    background-image: url(../images/icon-supervisor.svg);
+}
+
+#icon-team-builder {
+    background-image: url(../images/icon-team-builder.svg);
+}
+
+#icon-karma {
+    background-image: url(../images/icon-karma.svg);
+}
+
+#icon-calculator {
+    background-image: url(../images/icon-calculator.svg);
+}
+
+
+/*######## Desktop ########*/
+
+@media only screen and (min-width: 1024px) {
+    body {
+        height: 100vh;
+    }
+    .container {
+        margin: 50px;
+        margin-top: 0;
+        /*flex*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+    .intro {
+        margin-left: 25%;
+        margin-right: 25%;
+        padding-top: 6vh;
+        margin-bottom: 4vh;
+    }
+    .card-container {
+        /*flex*/
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: space-around;
+    }
+    .container-vertical {
+        /*flex*/
+        flex: 33%;
+        /*flex inside*/
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+        /*size*/
+        width: 20vw;
+        /*space*/
+        padding: 25px;
+    }
+    #card-supervisor {
+        /*space*/
+        margin-right: 1.5vw;
+        /*flex*/
+        flex: 33%;
+    }
+    #card-team-builder {
+        /*space*/
+        margin-bottom: 1.5vw;
+        /*flex*/
+        flex: 1;
+    }
+    #card-karma {
+        /*flex*/
+        flex: 1;
+    }
+    #card-calculator {
+        /*space*/
+        margin-left: 1.5vw;
+        /*flex*/
+        flex: 33%;
+    }
+}
