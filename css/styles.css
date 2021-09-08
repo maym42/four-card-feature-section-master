@@ -167,6 +167,10 @@ body {
         padding-top: 6vh;
         margin-bottom: 4vh;
     }
+    .thin-title,
+    .thick-title {
+        font-size: 40px;
+    }
     .card-container {
         /*flex*/
         display: flex;
